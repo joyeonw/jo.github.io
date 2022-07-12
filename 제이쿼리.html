@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 전체선택자 여백 없애기
+        img 가로 500px 세로 500px 비율맞추기 */
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        img {
+            width: 500px;
+            height: 500px;
+            object-fit: cover;
+            display: none;
+        }
+        .close {display: none;}
+
+    </style>
+</head>
+<body>
+    <section>
+        <div>
+            <button class="open">이미지보기</button>
+            <button class="close">이미지닫기</button>
+        </div>
+        <img src="img/stones-7307274__480.jpg" alt="돌사진">
+    </section>
+
+    <!-- 제이쿼리 라이브러리 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        $(function(){
+            $('.open').click(function(){
+                $('img').slideDown(1000);
+                $('.close').show();
+                $('.open').hide();
+
+                //메소드
+                //show()나타남 - hide()사라짐
+                //slideDown() 부드럽게 밑으로 나타남
+                //slideUp() 부드럽게 위로 사라짐
+                //(1000)=1초
+
+            });//click
+        });//jquery end
+        $(function(){
+            $('.close').click(function(){
+                $('img').slideUp(1000);
+                $('.close').hide();
+                $('.open').show();
+
+                //.close를 클릭을 했을 때
+                //img는 slideUp(시간넣기)
+                //.close는 hide()
+
+            });//jquery end
+
+        });
+    </script>
+</body>
+</html>
