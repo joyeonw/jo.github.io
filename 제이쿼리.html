@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,16 +14,20 @@
             margin: 0;
             padding: 0;
         }
+
         img {
             width: 500px;
             height: 500px;
             object-fit: cover;
             display: none;
         }
-        .close {display: none;}
 
+        .close {
+            display: none;
+        }
     </style>
 </head>
+
 <body>
     <section>
         <div>
@@ -33,10 +38,12 @@
     </section>
 
     <!-- 제이쿼리 라이브러리 -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
-        $(function(){
-            $('.open').click(function(){
+        $(function () {
+            $('.open').click(function () {
                 $('img').slideDown(1000);
                 $('.close').show();
                 $('.open').hide();
@@ -49,8 +56,8 @@
 
             });//click
         });//jquery end
-        $(function(){
-            $('.close').click(function(){
+        $(function () {
+            $('.close').click(function () {
                 $('img').slideUp(1000);
                 $('.close').hide();
                 $('.open').show();
@@ -64,4 +71,5 @@
         });
     </script>
 </body>
+
 </html>
