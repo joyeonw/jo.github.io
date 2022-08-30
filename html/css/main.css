@@ -1,0 +1,191 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: 'EarlyFontDiary';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_220508@1.0/EarlyFontDiary.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
+    line-height: 1;
+    color: #fff;
+    background-color: #000;
+    font-family: 'EarlyFontDiary';
+}
+
+.mobile {
+    display: none;
+}
+
+/* 공통적인 요소 */
+.title {
+    margin-bottom: 40px;
+}
+
+.title h3 {
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.title p {
+    font-size: 20px;
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.swiper-pagination-bullet {
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    font-size: 12px;
+    color: #000;
+    opacity: 1;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.swiper-pagination-bullet-active {
+    color: #fff;
+    background: #007aff;
+}
+
+/* header */
+header {
+    position: relative;
+    z-index: 9;
+}
+
+header>div {
+    max-width: 1440px;
+    width: 95%;
+    margin: 0 auto;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header>div .pc_gnb>ul {
+    display: flex;
+    height: 100%;
+}
+
+header>div .pc_gnb>ul>li {
+    position: relative;
+}
+
+header>div .pc_gnb>ul>li>a {
+    display: block;
+    line-height: 100px;
+    padding: 0 40px;
+}
+
+header>div .pc_gnb>ul>li .depth02 {
+    width: 100%;
+    position: absolute;
+    top: 100px;
+    left: 0;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 20px 0;
+}
+
+header>div .pc_gnb>ul>li .depth02 li {
+    padding: 10px 0;
+}
+
+/* .main_visual */
+.main_visual {
+    height: calc(100vh - 100px);
+}
+
+/* .cont01 */
+.cont01 {
+    max-width: 1440px;
+    width: 95%;
+    margin: 200px auto;
+}
+
+.cont01 .list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cont01 .list .item {
+    width: 24%;
+}
+
+.cont01 .list .item figure {
+    width: 100%;
+    height: 25vw;
+}
+
+.cont01 .list .item figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cont01 .list .item p {
+    width: 100%;
+    /*
+    글자 가운데 정렬
+    테두리 : 1px 직선 색상
+    글자크기 : 20px
+    내부여백 : 위아래 20px 좌우0
+    외부여백 위쪽 : 10px
+    */
+    text-align: center;
+    border: 1px solid #000;
+    font-size: 20px;
+    margin: 20px 0;
+    padding: 10px 0 0 0;
+
+}
